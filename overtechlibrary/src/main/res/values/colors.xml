@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorTabDeep">#FF2741</color>
+    <color name="colorTabLight">#676661</color>
+    <color name="bgNormalDialog">#676661</color>
+    <color name="bgMask">#78000000</color><!-- 蒙层色，50%纯黑 -->
+    <integer-array name="material_colors">
+        <item>@android:color/holo_red_light</item>
+        <item>@android:color/holo_green_light</item>
+        <item>@android:color/holo_blue_light</item>
+        <item>@android:color/holo_orange_light</item>
+    </integer-array>
+</resources>

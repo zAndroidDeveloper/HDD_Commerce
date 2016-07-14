@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textview_tab1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="1dp"
+        android:drawableTop="@drawable/selector_tab1"
+        android:gravity="center"
+        android:tag="@string/tab_text1"
+        android:text="@string/tab_text1"
+        android:textColor="@color/selector_textview_tab"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textview_tab2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="1dp"
+        android:drawableTop="@drawable/selector_tab2"
+        android:gravity="center"
+        android:tag="@string/tab_text2"
+        android:text="@string/tab_text2"
+        android:textColor="@color/selector_textview_tab"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textview_tab3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="1dp"
+        android:drawableTop="@drawable/selector_tab3"
+        android:gravity="center"
+        android:tag="@string/tab_text3"
+        android:text="@string/tab_text3"
+        android:textColor="@color/selector_textview_tab"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textview_tab4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="1dp"
+        android:drawableTop="@drawable/selector_tab4"
+        android:gravity="center"
+        android:tag="@string/tab_text4"
+        android:text="@string/tab_text4"
+        android:textColor="@color/selector_textview_tab"
+        android:textSize="14sp" />
+
+</LinearLayout>

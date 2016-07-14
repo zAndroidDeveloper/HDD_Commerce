@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Overtech Library</string>
+    <string name="tab_text1">首页</string>
+    <string name="tab_text2">热榜</string>
+    <string name="tab_text3">搜索</string>
+    <string name="tab_text4">个人中心</string>
+</resources>
