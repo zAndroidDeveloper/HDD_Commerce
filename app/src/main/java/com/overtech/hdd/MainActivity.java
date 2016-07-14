@@ -3,6 +3,7 @@ package com.overtech.hdd;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.TextViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -11,8 +12,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.overtech.djtechlibrary.utils.FragmentUtils;
 import com.overtech.djtechlibrary.utils.Utilities;
 import com.overtech.djtechlibrary.widget.tabview.TabView;
+import com.overtech.hdd.activity.fragment.ClassifyFragment;
+import com.overtech.hdd.activity.fragment.HotFragment;
+import com.overtech.hdd.activity.fragment.MainFragment;
+import com.overtech.hdd.activity.fragment.PersonFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements TabView.OnTabChan
 
     private int mCurrentTabIndex;
     private int mPreviousTabIndex;
+    private Fragment currentFragment;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.fab)
@@ -75,11 +82,15 @@ public class MainActivity extends AppCompatActivity implements TabView.OnTabChan
         if (tag != null) {
             if (tag.equals(getResources().getString(R.string.tab_text1))) {
                 Utilities.showToast(getResources().getString(R.string.tab_text1), this);
+                currentFragment = FragmentUtils.switchFragment(getSupportFragmentManager(), R.id.fl_main_container, currentFragment, MainFragment.class, null);
             } else if (tag.equals(getResources().getString(R.string.tab_text2))) {
                 Utilities.showToast(getResources().getString(R.string.tab_text2), this);
+                currentFragment = FragmentUtils.switchFragment(getSupportFragmentManager(), R.id.fl_main_container, currentFragment, HotFragment.class, null);
             } else if (tag.equals(getResources().getString(R.string.tab_text3))) {
+                currentFragment = FragmentUtils.switchFragment(getSupportFragmentManager(), R.id.fl_main_container, currentFragment, ClassifyFragment.class, null);
                 Utilities.showToast(getResources().getString(R.string.tab_text3), this);
             } else if (tag.equals(getResources().getString(R.string.tab_text4))) {
+                currentFragment = FragmentUtils.switchFragment(getSupportFragmentManager(), R.id.fl_main_container, currentFragment, PersonFragment.class, null);
                 Utilities.showToast(getResources().getString(R.string.tab_text4), this);
             }
         }
