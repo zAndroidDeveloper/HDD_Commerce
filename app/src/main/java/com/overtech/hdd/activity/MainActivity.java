@@ -1,4 +1,4 @@
-package com.overtech.hdd;
+package com.overtech.hdd.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.overtech.djtechlibrary.utils.FragmentUtils;
 import com.overtech.djtechlibrary.utils.Utilities;
 import com.overtech.djtechlibrary.widget.tabview.TabView;
+import com.overtech.hdd.R;
 import com.overtech.hdd.activity.fragment.ClassifyFragment;
 import com.overtech.hdd.activity.fragment.HotFragment;
 import com.overtech.hdd.activity.fragment.MainFragment;

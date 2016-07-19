@@ -27,3 +27,10 @@
 -keepclasseswithmembernames class * {
     @butterknife.* <methods>;
 }
+-dontwarn okio.**
+-keep class okio.**{*;}
+-dontwarn okhttp3.**
+-keep class okhttp3.**{*;}
+-dontwarn com.zhy.http.**
+-keep class com.zhy.http.**{*;}
+

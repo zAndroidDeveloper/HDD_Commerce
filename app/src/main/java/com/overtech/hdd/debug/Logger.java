@@ -1,6 +1,7 @@
-package com.overtech.djtechlibrary.debug;
+package com.overtech.hdd.debug;
 
-import com.overtech.djtechlibrary.BuildConfig;
+
+import com.overtech.hdd.BuildConfig;
 
 public class Logger {
 

@@ -4,4 +4,5 @@
     <string name="tab_text2">热榜</string>
     <string name="tab_text3">搜索</string>
     <string name="tab_text4">个人中心</string>
+    <string name="network_loading">加载中...</string>
 </resources>

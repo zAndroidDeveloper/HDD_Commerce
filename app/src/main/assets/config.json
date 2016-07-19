@@ -1,0 +1,166 @@
+[
+{
+    "name": "秒杀",
+    "icon": "img/icon_spike.png",
+    "tip": "img/flag_new.png",
+	"showTip": true,
+	"tipPolicy": "daily",
+	"forward": {
+					"type": "web", 
+					"props": {"url": "spike.html"}
+					},
+	"key": "spike",
+    "priority": 1,
+    "show": true,
+	"auth": false
+},{
+    "name": "超值大牌",
+    "icon": "img/icon_super_spike.png",
+    "tip": "img/flag_hot.png",
+	"showTip": true,
+	"tipPolicy": "daily",
+	"forward": {
+					"type":"superbrand"
+					},
+    "key": "super_spike",
+    "priority": 3,
+    "show": true
+},{
+	"name": "9块9特卖",
+	"icon": "img/icon_9_9.png",
+	"tip": "img/flag_new.png",
+	"showTip": true,
+	"tipPolicy": "daily",
+	"forward":{
+					"type":"pdd_subject", 
+					"props": {"subject_id": 384}
+					},
+	"key": "9.9",
+	"priority": 5,
+	"show": true
+},{
+	"name": "1元购",
+	"icon": "img/icon_one.png",
+	"tip": "img/flag_new.png",
+	"showTip": true,
+	"tipPolicy": "daily",
+	"forward":{
+					"type":"web", 
+					"props": {"url": "subject.html?subject_id=452"}
+					},
+	"key": "yiyuan",
+	"priority": 5.5,
+	"show": true
+},{
+	"name": "88元红包",
+	"icon": "img/icon_coupon.png",
+	"tip": "img/flag_coupon.png",
+	"showTip": true,
+	"forward": {
+					"type":"web"
+					},
+	"key": "coupon",
+	"priority": 7,
+	"show": false,
+	"auth": true
+},{
+    "name": "免费试用团",
+    "icon": "img/icon_trial.png",
+    "tip": "img/flag_free.png",
+	"showTip": true,
+	"tipPolicy": "daily",
+	"forward": {
+					"type": "web", 
+					"props": {"url": "free_trial_page.html"}
+					},
+    "key": "free_trial",
+    "priority": 8,
+    "show": true,
+	"min_html_version":"2.3.4"
+},{
+    "name": "抽奖",
+    "icon": "img/icon_lottery.png",
+    "tip":"img/flag_new.png",
+	"showTip": true,
+	"tipPolicy": "daily",
+	"forward":{
+					"type": "web", 
+					"props": {"url": "lottery.html"}
+					},
+    "key": "lottery",
+    "priority": 9,
+    "show": true
+}, {
+    "name": "食品",
+    "icon": "img/icon_foods.png",
+	"forward": {
+					"type": "category", 
+					"props": {"opt_id": 1, "opt_type": 1}
+					},
+    "key":  "foods",
+    "priority": 11,
+    "show":true
+}, {
+    "name": "服饰箱包",
+    "icon": "img/icon_clothing.png",
+	"forward": {
+					"type": "category", 
+					"props": {"opt_id": 14, "opt_type": 1}
+					},
+	"key": "clothing",
+    "priority":13,
+    "show":true
+}, {
+    "name": "家居生活",
+    "icon": "img/icon_household.png",
+	"forward": {
+					"type": "category", 
+					"props": {"opt_id": 15, "opt_type": 1}
+					},
+    "key": "household",
+    "priority":15,
+    "show": true
+}, {
+    "name": "数码电器",
+    "icon": "img/icon_digital.png",
+	"forward": {
+					"type": "category", 
+					"props": {"opt_id": 18, "opt_type": 1}
+					},
+    "key": "digital",
+    "priority":16,
+    "show": true
+},{
+    "name": "母婴",
+    "icon": "img/icon_children.png",
+	"forward": {
+					"type": "category", 
+					"props": {"opt_id": 4, "opt_type": 1}
+					},
+	"key": "children",
+    "priority": 17,
+    "show": true
+}, {
+    "name": "美妆护肤",
+    "icon": "img/icon_makeup.png",
+	"forward": {
+					"type": "category", 
+					"props": {"opt_id": 16, "opt_type": 1}
+					},
+	"key": "makeup",
+    "priority" :19,
+    "show": true
+}, {
+    "name": "海淘",
+    "icon": "img/icon_overseas.png",
+    "tip":"img/flag_new.png",
+    "showTip": true,
+	"tipPolicy": "daily",
+	"forward":{
+					"type": "switch_tab", 
+					"props": {"index": 2}
+					},
+    "key":"haitao",
+    "priority": 21,
+    "show": true
+}]

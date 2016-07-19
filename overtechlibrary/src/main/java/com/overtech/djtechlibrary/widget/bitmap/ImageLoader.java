@@ -1,7 +1,10 @@
 package com.overtech.djtechlibrary.widget.bitmap;
 
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
+import android.graphics.BitmapFactory;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
@@ -12,6 +15,8 @@ import com.squareup.picasso.Target;
 import com.squareup.picasso.Transformation;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class ImageLoader {
     public static final int STUB_NULL = -1;// 不设置默认图
@@ -34,6 +39,17 @@ public class ImageLoader {
             imageLoader = new ImageLoader();
         }
         return imageLoader;
+    }
+
+    public void displayAssetImage(String url, ImageView imageView) {
+        AssetManager assets = context.getAssets();
+        try {
+            InputStream open = assets.open(url);
+            Bitmap bitmap = BitmapFactory.decodeStream(open);
+            imageView.setImageBitmap(bitmap);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

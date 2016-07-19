@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.overtech.djtechlibrary.debug.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,6 +31,25 @@ import java.util.regex.Pattern;
  * @author Tony 2015-10-08
  */
 public class Utilities {
+
+    /**
+     * @param fen 人民币分
+     * @return 人民币元
+     */
+    public static String fen2yuan(double fen) {
+        int intFen= (int) fen;
+        int modDime = intFen % 100;
+        if (modDime > 0) {
+            int modFen = modDime % 10;
+            if (modFen > 0) {
+                return intFen / 100 + "." + modDime / 10 + modFen;
+            } else {
+                return intFen / 100 + "." + modDime / 10;
+            }
+        } else {
+            return intFen / 100 + "";
+        }
+    }
 
     /**
      * 公用提示框
@@ -222,7 +240,6 @@ public class Utilities {
      * @return
      */
     public static String getTimeBetween(long curTime, long desTime) {
-        Logger.e("当前时间戳" + curTime + "===" + "预约时间戳" + desTime);
         StringBuilder sb = new StringBuilder();
         long a = desTime - curTime;
         if (a < 0) {
@@ -250,9 +267,9 @@ public class Utilities {
             int[] l = {0, 0};
             v.getLocationInWindow(l);
             int left = l[0], top = l[1], bottom = top + v.getHeight();
-            int right=ScreenTools.instance(v.getContext()).dip2px(360);
-            if(v.getParent() instanceof LinearLayout){//此处这样写是因为实际处理时发现点击评论框旁边的按钮时 无法发送数据直接就隐藏了
-                right=((LinearLayout)v.getParent()).getWidth();
+            int right = ScreenTools.instance(v.getContext()).dip2px(360);
+            if (v.getParent() instanceof LinearLayout) {//此处这样写是因为实际处理时发现点击评论框旁边的按钮时 无法发送数据直接就隐藏了
+                right = ((LinearLayout) v.getParent()).getWidth();
             }
             if (event.getX() > left && event.getX() < right
                     && event.getY() > top && event.getY() < bottom) {
@@ -277,7 +294,8 @@ public class Utilities {
 //            }
         }
     }
-    public static void showSoftInput(Context context){
+
+    public static void showSoftInput(Context context) {
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.RESULT_UNCHANGED_SHOWN, InputMethodManager.HIDE_NOT_ALWAYS);
     }

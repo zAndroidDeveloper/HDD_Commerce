@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">好多多</string>
     <string name="action_settings">Settings</string>
+    <string name="hint_mobile_app_group">请输入\"参团专享码\""</string>
+    <string name="confirm">确认</string>
+    <string name="super_brand">超值大牌</string>
 </resources>
